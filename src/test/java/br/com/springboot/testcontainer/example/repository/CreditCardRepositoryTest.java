@@ -1,8 +1,6 @@
 package br.com.springboot.testcontainer.example.repository;
 
-import br.com.springboot.testcontainer.example.config.PostgresqlDB;
 import br.com.springboot.testcontainer.example.entity.CreditCard;
-import org.junit.ClassRule;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,9 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 public class CreditCardRepositoryTest {
-
-	@ClassRule
-	public static PostgresqlDB postgresqlDB = PostgresqlDB.getInstance();
 
 	@Autowired
 	private CreditCardRepository creditCardRepository;
