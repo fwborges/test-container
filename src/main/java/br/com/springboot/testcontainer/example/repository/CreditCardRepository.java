@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface CreditCardRepository extends CrudRepository<CreditCard, Long> {
 
     @Modifying(clearAutomatically = true)
-    @Query(value = "UPDATE CreditCard c SET active = ? WHERE c.name = ?",
+    @Query(value = "UPDATE CreditCard c SET c.active = ? WHERE c.name = ?",
             nativeQuery = true)
     void updateActiveStatus(boolean active, String name);
 }
